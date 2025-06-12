@@ -3,10 +3,19 @@ from ultralytics import YOLO
 from collections import Counter
 
 # Load YOLOv8 model
-model = YOLO("yolov8m.pt")
+model = YOLO("yolov8n.pt")
+
+# Find the first video file in the /videos directory
+# (You can change this to your specific video file)
+import os
+video_files = [f for f in os.listdir("videos") if f.endswith(('.mp4', '.avi', '.mov'))]
+if not video_files:
+    print("No video files found in the 'videos' directory.")
+    exit()
+video_path = os.path.join("videos", video_files[0])
 
 # Open video
-cap = cv2.VideoCapture("traffic.mp4")  # Thay bằng tên video của bạn
+cap = cv2.VideoCapture("videos/v2.mp4")  # Thay bằng tên video của bạn
 vehicle_classes = ['car', 'bus', 'truck', 'motorcycle', 'bicycle']
 all_detected = []
 
