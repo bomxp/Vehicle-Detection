@@ -3,6 +3,7 @@ from collections import Counter
 
 # Load model
 model = YOLO("../yolov8n.pt")  # hoặc yolov8s.pt nếu muốn chính xác hơn
+# model = YOLO("../yolov8-vietnamese-vehicle-20.pt")  # test with trained model
 
 # Detect objects in image
 results = model("images/traffic2.webp", show=True)

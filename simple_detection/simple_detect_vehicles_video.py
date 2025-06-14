@@ -3,7 +3,8 @@ from ultralytics import YOLO
 from collections import Counter
 
 # Load YOLOv8 model
-model = YOLO("../yolov8n.pt")
+# model = YOLO("../yolov8n.pt")
+model = YOLO("../yolov8-vietnamese-vehicle-30-epochs.pt")
 
 # Find the first video file in the /videos directory
 # (You can change this to your specific video file)
@@ -16,7 +17,7 @@ video_path = os.path.join("videos", video_files[0])
 print("Using video file:", video_path)
 
 # Open video
-cap = cv2.VideoCapture(video_path)  # Thay bằng tên video của bạn
+cap = cv2.VideoCapture("videos/night_nguyentrai_ngatuso.MP4")  # Thay bằng tên video của bạn
 vehicle_classes = ['car', 'bus', 'truck', 'motorcycle', 'bicycle']
 all_detected = []
 
