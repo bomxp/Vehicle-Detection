@@ -2,14 +2,14 @@ from ultralytics import YOLO
 from collections import Counter
 
 # Load model
-model = YOLO("yolov8n.pt")  # hoặc yolov8s.pt nếu muốn chính xác hơn
+model = YOLO("../yolov8n.pt")  # hoặc yolov8s.pt nếu muốn chính xác hơn
 
 # Detect objects in image
 results = model("images/traffic2.webp", show=True)
 
 # delay 5s
 import time
-time.sleep(3)
+time.sleep(10)
 
 # Extract class names
 vehicle_classes = ['car', 'bus', 'truck', 'motorcycle', 'bicycle']
