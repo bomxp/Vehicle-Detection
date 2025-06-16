@@ -10,7 +10,7 @@ results = model("images/traffic2.webp", show=True)
 
 # delay 5s
 import time
-time.sleep(10)
+time.sleep(100)
 
 # Extract class names
 vehicle_classes = ['car', 'bus', 'truck', 'motorcycle', 'bicycle']

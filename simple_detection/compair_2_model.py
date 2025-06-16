@@ -4,7 +4,8 @@ import cv2
 # Model paths and image path
 model_path1 = "../yolov8n.pt"
 model_path2 = "../yolov8-vietnamese-vehicle-20.pt"
-image_path = "images/night_nguyentrai_ngatuso2.jpg"
+# image_path = "images/traffic2.webp"
+image_path = "images/night_nguyentrai_ngatuso1.jpg"
 
 # Load models
 model1 = YOLO(model_path1)
